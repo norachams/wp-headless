@@ -19,7 +19,6 @@ export default function Home() {
       <Stats/>
       <Section>
       <Container>
-        <ToDelete />
       </Container>
     </Section></>
   );

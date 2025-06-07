@@ -8,19 +8,17 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section className="relative isolate flex min-h-[70vh] items-center">
-      {/* Background photo */}
+     
       <Image
-        src="/hero_homs.jpg"          // 2400×1600 px or so
+        src="/hero_homs.jpg"         
         alt="Volunteers rebuilding the streets of Homs"
-        fill                                  // makes the image cover the section
+        fill                                 
         priority
         className="-z-10 object-cover object-center"
       />
 
-      {/* Optional dark overlay for better text contrast */}
       <div className="absolute inset-0 -z-10 bg-black/40" />
 
-      {/* Copy block */}
       <div className="mx-auto max-w-3xl px-6 py-20 sm:px-1 text-white">
         <h1 className="font-bold leading-tight tracking-tight text-4xl sm:text-6xl">
         Together, We Rebuild Homs
