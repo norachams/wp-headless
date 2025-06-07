@@ -67,25 +67,24 @@ const Nav = ({ className, children, id }: NavProps) => {
     >
       <div
         id="nav-container"
-        className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
+        className="max-w-5xl mx-auto flex items-center py-4 px-6 sm:px-8"
       >
         <Link
-          className="hover:opacity-75 transition-all flex gap-4 items-center"
           href="/"
+          className="hover:opacity-75 transition-all flex gap-4 items-center"
         >
           <Image
             src={Logo}
             alt="Logo"
             loading="eager"
             className="dark:invert"
-            width={42}
-            height={26.44}
+            width={72}
+            height={56.44}
           ></Image>
-          <h2 className="text-sm">{siteConfig.site_name}</h2>
+         {/* <h2 className="text-sm">{siteConfig.site_name}</h2>*/}
         </Link>
-        {children}
-        <div className="flex items-center gap-2">
-          <div className="mx-2 hidden md:flex">
+        
+        <nav className="hidden md:flex ml-8 gap-2">
             {Object.entries(mainMenu).map(([key, href]) => (
               <Button key={href} asChild variant="ghost" size="sm">
                 <Link href={href}>
@@ -93,9 +92,12 @@ const Nav = ({ className, children, id }: NavProps) => {
                 </Link>
               </Button>
             ))}
-          </div>
+        </nav>
+
+
+          <div  className="ml-auto flex items-center gap-2">
           <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+            <Link href="https://github.com/9d8dev/next-wp">Donate</Link>
           </Button>
           <MobileNav />
         </div>

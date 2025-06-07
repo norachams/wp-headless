@@ -1,6 +1,8 @@
 // Craft Imports
 import { Section, Container, Prose } from "@/components/craft";
 import Balancer from "react-wrap-balancer";
+import {Hero} from "@/components/hero"
+import {Stats} from "@/components/stats"
 
 // Next.js Imports
 import Link from "next/link";
@@ -13,11 +15,13 @@ import { NextJsIcon } from "@/components/icons/nextjs";
 // This page is using the craft.tsx component and design system
 export default function Home() {
   return (
-    <Section>
+      <><Hero />
+      <Stats/>
+      <Section>
       <Container>
         <ToDelete />
       </Container>
-    </Section>
+    </Section></>
   );
 }
 
